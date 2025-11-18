@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
-    <head>
+    <title>Cadastro de Cliente</title>
+
 <style>
-/* === ESTILIZAÇÃO GLOBAL === */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #e3edf7, #cfd9df);
@@ -17,37 +16,20 @@ body {
     margin: 0;
 }
 
-/* === FORMULÁRIO === */
 form {
     background: #ffffff;
     padding: 30px;
     border-radius: 18px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     width: 330px;
-    animation: fadeIn 0.6s ease-in-out;
-}
-
-/* Animação suave ao aparecer */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 h2 {
     text-align: center;
     color: #2d3748;
     margin-bottom: 25px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
 }
 
-/* === LABELS === */
 label {
     display: block;
     color: #4a5568;
@@ -56,30 +38,14 @@ label {
     font-weight: 500;
 }
 
-/* === INPUTS === */
 input {
     width: 100%;
     padding: 10px 12px;
     border: 1.8px solid #cbd5e0;
     border-radius: 8px;
     margin-bottom: 18px;
-    font-size: 15px;
-    background-color: #f9fafb;
-    transition: all 0.3s ease;
 }
 
-input:hover {
-    border-color: #a0aec0;
-}
-
-input:focus {
-    border-color: #3182ce;
-    box-shadow: 0 0 5px rgba(49, 130, 206, 0.3);
-    outline: none;
-    background-color: #fff;
-}
-
-/* === BOTÃO === */
 button {
     width: 100%;
     padding: 12px;
@@ -88,30 +54,35 @@ button {
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    font-weight: 600;
     cursor: pointer;
-    letter-spacing: 0.5px;
-    transition: transform 0.2s ease, background 0.3s ease;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
 }
 
 button:hover {
     background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    transform: scale(1.03);
 }
 
-button:active {
-    transform: scale(0.98);
+.link-btn {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    padding: 12px;
+    background: #4a5568;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-</style
+.link-btn:hover {
+    background: #2d3748;
+}
+</style>
 
 </head>
 <body>
+
     <form action="insert.php" method="post">
-        <h2>Cadastro</h2>
-           <label>ID:</label>
-        <input type="number" name="id_cliente" required>
+        <h2>Cadastro de Cliente</h2>
 
         <label>Nome:</label>
         <input type="text" name="nome_cliente" required>
@@ -131,7 +102,11 @@ button:active {
         <label>ID Veículo:</label>
         <input type="number" name="id_veiculo" required>
 
-        <button type="submit">Enviar</button>
+        <button type="submit">Cadastrar</button>
+
+        <!-- LINK PARA A PÁGINA DE CLIENTES -->
+        <a href="oficina.php" class="link-btn">Ver Clientes Registrados</a>
     </form>
+
 </body>
 </html>
